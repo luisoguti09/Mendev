@@ -15,7 +15,7 @@ export class LoginService {
     private httpClient: HttpClient
   ) 
   { 
-    this.url =  'http://sd-3971730-h00001.ferozo.net222';
+    this.url =  'http://sd-3971730-h00001.ferozo.net';
     this.httpOptions = {
       headers: new HttpHeaders({
         "Content-Type": "application/json",
