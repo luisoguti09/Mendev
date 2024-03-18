@@ -1,0 +1,40 @@
+<p-card header="Registro de Veterinarios">
+    <img src="../../../assets/backLog.png" alt="logoVet" class="img-card">
+    <ng-template pTemplate="header">
+    
+    </ng-template>
+    <ng-template pTemplate="content">
+      <form action="formularioRegistro" method="" (ngSubmit)="guardar()" [formGroup]="form">
+       
+          <label position="floating">Nombre</label>
+          <input type="text" pInputText formControlName="nombre">
+       
+          <label position="floating">Apellido</label>
+          <input type="text" pInputText formControlName="apellido"/>
+       
+          <label position="floating">Edad</label>
+          <input type="number" pInputText formControlName="edad"/>
+       
+          <label position="floating">Email</label>
+          <input type="text" pInputText formControlName="email" type="email"/>
+
+          <label position="floating">Numero de Licencia</label>
+          <input type="text" pInputText formControlName="lic" type="text"/>
+       
+          <label position="floating">Contraseña</label>
+          <input pInputText formControlName="pass" type="password"/>
+        
+          <label position="floating">Confirme Contraseña</label>
+          <input type="text" pInputText formControlName="confirmPass" type="password"/>
+       
+        <div class="tycs">
+          <p-checkbox formControlName="tycs" (change)="test()" value="TyCs" inputId="tycs">
+            Acepto los Terminos y Condiciones</p-checkbox>
+          <label for="tycs" [routerLink]="['/tycs']">Aceptar Terminos y Condiciones</label>
+        </div>
+        <p-button (click)="guardar()" class="botonReg" [disabled]="form.invalid">
+          Registrarme
+        </p-button>
+      </form>
+    </ng-template>
+  </p-card>

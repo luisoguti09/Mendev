@@ -26,5 +26,20 @@ export class LoginService {
   loginSucc(usuario: any, pass: any) : Observable<any> { 
     return this.httpClient.get(`${this.url}/login.php?usuario=${usuario}&password=${pass}`);
   }
+
+  loginUser(vetAsoc:any) : Observable<any> { 
+    return this.httpClient.get(`${this.url}/login.php?vet-asoc-id=${vetAsoc}`);
+  }
+  
+  
+
+  tipoUser(){
+   return this.httpClient.get(`${this.url}/tipoUsuario.php`)
+  } 
+
+  tipoLogin(tipoUser:any, tipoId:number){
+    return this.httpClient.get(`${this.url}/login.php?tipoUser=${tipoUser}&id=${tipoId}`);
+  }
+
   
 }

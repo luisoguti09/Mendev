@@ -4,7 +4,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { CheckboxModule } from 'primeng/checkbox';
+import { MessagesModule } from 'primeng/messages';
+import { SliderModule } from 'primeng/slider';
 
 
 @NgModule({
@@ -13,7 +16,11 @@ import { CardModule } from 'primeng/card';
     InputTextModule,
     PasswordModule,
     ButtonModule,
-    CardModule
+    CardModule,
+    FloatLabelModule,
+    CheckboxModule,
+    MessagesModule,
+    SliderModule
   ]
 })
 export class PrimengModule { }

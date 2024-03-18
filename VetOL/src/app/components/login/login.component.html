@@ -1,0 +1,27 @@
+<div>
+    <p-card header="Vet Online" subheader="Ingreso" [style]="{ width: '360px' }">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+        </ng-template>
+        <ng-template pTemplate="content">
+            <form [formGroup]="form">
+                <p-floatLabel>
+                    <input type="text" pInputText id="username" formControlName="email" />
+                    <label for="username">Usuario</label>
+                </p-floatLabel>
+                <p-floatLabel>
+                    <p-password formControlName="pass" id="pass"></p-password>
+                    <label for="pass">Contraseña</label>
+                </p-floatLabel>
+            </form>
+            <p-button type="submit" (click)="loguedUser()">
+                Ingresar
+            </p-button>
+        </ng-template>
+    </p-card>
+    <small id="username-help">No estas registrado?</small>
+    <a [routerLink]="[ '/registro']">Registrarme</a>
+    <form [formGroup]="form">
+        <p-slider formControlName="value"></p-slider>
+    </form>
+</div>
