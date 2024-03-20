@@ -30,14 +30,14 @@ export class RegistroService {
     },this.httpOptions)
   }
 
-  guardarVet(nombre: string, apellido: string, edad: number, lic: string, email: string, pass: string, confirmPass: string, tycs: string, ){
-    return this.httpClient.post(`${this.url}/registro.php`,{
+  guardarVet(nombre: string, apellido: string, edad: number, lic: number, email: string, pass: string, confirmPass: string, tycs: string, ){
+    return this.httpClient.post(`${this.url}/registro-vet.php`,{
       nombre, 
       apellido,
       edad,
-      lic,
       password: pass,
       usuario: email,
+      lic,
       tycs,
     },this.httpOptions)
   }

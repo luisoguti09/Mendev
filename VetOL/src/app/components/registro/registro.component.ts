@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { LoginService } from '../../service/login.service';
 import { MyValidations } from './my-validations';
@@ -27,6 +27,7 @@ export class RegistroComponent {
     private regServ: RegistroService,
     private router: Router,
     private messageService: MessageService,
+    private activatedRouter: ActivatedRoute
   ) {
     this.form = this.fb.group({
       nombre: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z ]+$/)]),
@@ -45,6 +46,7 @@ export class RegistroComponent {
   }
 
   ngOnInit() {
+    console.log(this.activatedRouter.params);
     this.logServ.tipoUser().subscribe((res: any) => {
       if (!!res) {
         this.tipoUsuarios = res.filter((tU: any) => {

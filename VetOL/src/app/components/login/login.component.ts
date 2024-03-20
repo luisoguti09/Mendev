@@ -51,4 +51,9 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  registrarse() {
+    console.log(this.value);
+    this.router.navigate([this.value === 100 ? 'registro-vet' :'registro'] );
+  }
+
 }

@@ -1,0 +1,43 @@
+
+.login-container{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    background-color: #e97eec;
+}
+
+.cardLogin{
+    padding: 30px;
+    text-align: center;
+    align-content: center;
+    margin-top: 30px;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.cardHeader{
+    background-color: #d11ee9;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.inputUser{
+    padding-top: 30px;
+}
+
+.inputPass{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.regLogin{
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.slider{
+    display: flex;
+    padding: 10px;
+}
+

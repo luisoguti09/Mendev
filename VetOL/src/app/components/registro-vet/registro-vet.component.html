@@ -4,7 +4,7 @@
     
     </ng-template>
     <ng-template pTemplate="content">
-      <form action="formularioRegistro" method="" (ngSubmit)="guardar()" [formGroup]="form">
+      <form action="formularioRegistro" method="" (ngSubmit)="guardarVet()" [formGroup]="form">
        
           <label position="floating">Nombre</label>
           <input type="text" pInputText formControlName="nombre">
@@ -14,12 +14,12 @@
        
           <label position="floating">Edad</label>
           <input type="number" pInputText formControlName="edad"/>
-       
-          <label position="floating">Email</label>
-          <input type="text" pInputText formControlName="email" type="email"/>
 
           <label position="floating">Numero de Licencia</label>
           <input type="text" pInputText formControlName="lic" type="text"/>
+       
+          <label position="floating">Email</label>
+          <input type="text" pInputText formControlName="email" type="email"/>
        
           <label position="floating">Contraseña</label>
           <input pInputText formControlName="pass" type="password"/>
@@ -32,7 +32,7 @@
             Acepto los Terminos y Condiciones</p-checkbox>
           <label for="tycs" [routerLink]="['/tycs']">Aceptar Terminos y Condiciones</label>
         </div>
-        <p-button (click)="guardar()" class="botonReg" [disabled]="form.invalid">
+        <p-button (click)="guardarVet()" class="botonReg" [disabled]="form.invalid">
           Registrarme
         </p-button>
       </form>
