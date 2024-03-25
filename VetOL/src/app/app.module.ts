@@ -12,13 +12,19 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 import { RegistroVetComponent } from './components/registro-vet/registro-vet.component';
+import { DashtutComponent } from './components/dashtut/dashtut.component';
+import { DashboardVetComponent } from './components/dashboard-vet/dashboard-vet.component';
+import { DashboardTutorComponent } from './components/dashboard-tutor/dashboard-tutor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistroComponent,
-    RegistroVetComponent
+    RegistroVetComponent,
+    DashtutComponent,
+    DashboardVetComponent,
+    DashboardTutorComponent
   ],
   imports: [
     BrowserModule,

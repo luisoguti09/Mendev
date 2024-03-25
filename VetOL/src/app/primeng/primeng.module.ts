@@ -8,6 +8,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { CheckboxModule } from 'primeng/checkbox';
 import { MessagesModule } from 'primeng/messages';
 import { SliderModule } from 'primeng/slider';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SliderModule } from 'primeng/slider';
     FloatLabelModule,
     CheckboxModule,
     MessagesModule,
-    SliderModule
+    SliderModule,
+    FontAwesomeModule
   ]
 })
 export class PrimengModule { }

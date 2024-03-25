@@ -1,0 +1,130 @@
+
+.contenedorRegVet{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+.barrita{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(57,86,99,0.75);
+}
+
+.marca-principal{
+    height: 50px;
+    padding: 5px 0 5px 20px;
+    img{
+        height: 100%
+    }
+}
+
+nav ul{
+    position: absolute;
+    width: 60%;
+    height: calc(100vh - 50px);
+    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(49, 75, 87, 0.9);
+    top: 50px;
+    left: -100%;
+    transition: all .5s;
+}
+
+#check{
+    display: none;
+}
+
+.checkbtn{
+    display: block;
+    color: #ffffff;
+    font-size: 32px;
+    padding: 9px 20px 9px 0;
+    text-align: right;
+}
+
+#check:checked ~ ul{
+    left: 0;
+}
+
+nav ul{
+    padding-top: 25px;
+}
+
+nav ul li{
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    padding: 15px 0 15px 20px;
+    text-align: left;
+    &:nth-child(1){
+        border-top: 1px solid rgba(255,255,255,0.6);
+        
+        a{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            color: #a3c6d6;
+            text-decoration: none;
+         }
+    }
+}
+
+li.urg{
+    background: linear-gradient(#a50c0c, #ff0000);
+    a{
+        color: #ffffff !important;
+    }
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.cardAsociado{
+    width: 80%;
+    height: auto;
+    background-color: rgba(255,255,255,0.6);
+    border: 5px solid #43c928;
+    border-radius: 20px;
+    padding: 40px 20px;
+    margin: 40px auto 0 auto;
+}
+
+
+
+
+.acciones{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.iconAxnOn{
+    width: 100%;
+    background-color: rgba(34,146,52,0.8);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgba(34,146,52,1);
+}
+
+.iconAxnOff{
+    width: 100%;
+    background-color: rgba(199, 14, 14, 0.8);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgba(199, 14, 14, 1);
+}
